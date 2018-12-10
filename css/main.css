@@ -105,7 +105,7 @@ html {
 h2 h3 h4 h5 {
     font-size: 1em;
     text-transform:uppercase;
-    font-family:sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
 img {
     max-width: 100%;
@@ -138,6 +138,9 @@ img {
     font-weight:bolder;
     text-decoration: none;
 }
+.top-header .top-nav li a:hover {
+    text-decoration: underline;
+}
 .top-header .apply {
     position: absolute;
     width: 100%;
@@ -161,6 +164,9 @@ img {
     font-size:14px;
     padding: 10px;
     text-decoration: none;
+}
+.top-header .apply li a:hover {
+    text-decoration: underline;
 }
 .page-header {
     position: relative;
@@ -339,7 +345,7 @@ body {
     right:0;
     margin:auto;
 }
-.page-section-apply :hover {
+.page-section-apply:hover {
     text-decoration-line: underline;
     }
 .degree-bg  {
@@ -360,7 +366,9 @@ body {
     grid-template-columns: auto auto auto;
 }
 .grid-item {
-    border: 1px solid rgba(255,255,255,.25);
+    border-left: 1px solid rgba(255,255,255,.25);
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    border-right: 1px solid rgba(255,255,255,.25);
     font-size: 30px;
     text-align: left;
     height:60px;
@@ -377,9 +385,8 @@ body {
 }
 .highlights {
     background-color:#EEEEEE;
-    position:relative;
-    top:0;
-    border-bottom: .25px solid grey;
+    position:absolute;
+    top:1000px;
 }
 .highlights h2 {
     position:relative;
@@ -392,16 +399,20 @@ body {
 }
 .princeton {
     border-bottom: .25px solid grey;
+    margin-left:5.25em;
+    margin-right:5.25em;
+    height:320px;
 }
 .princeton img {
     position:relative;
     top:2em;
-    left: 5.25em;
-    margin-right:125px;
+    margin-right:75px;
     max-width: 375px;
 }
 .princeton h3 {
-    display:inline-block;
+    position:relative;
+    top:-230px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
@@ -410,25 +421,30 @@ body {
 }
 .princeton p {
     position:relative;
-    top:0;
-    left:500px;
+    top:-240px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
     font-size: 15px;
+    color:#555555;
 }
 .ccp {
     border-bottom: .25px solid grey;
+    margin-left:5.25em;
+    margin-right:5.25em;
+    height:320px;
 }
 .ccp img {
     position:relative;
     top:2em;
-    left: 5.25em;
     margin-right:125px;
     max-width: 375px;
 }
 .ccp h3 {
-    display:inline-block;
+    position:relative;
+    top:-230px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
@@ -437,22 +453,28 @@ body {
 }
 .ccp p {
     position:relative;
-    top:0;
-    left:500px;
+    top:-240px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
     font-size: 15px;
+    color:#555555;
+}
+.statement {
+    margin-left:5.25em;
+    margin-right:5.25em;
 }
 .statement img {
     position:relative;
     top:2em;
-    left: 5.25em;
     margin-right:125px;
     max-width: 375px;
 }
 .statement h3 {
-    display:inline-block;
+    position:relative;
+    top:-230px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
@@ -461,32 +483,47 @@ body {
 }
 .statement p {
     position:relative;
-    top:0;
-    left:500px;
+    top:-240px;
+    left:425px;
     width:550px;
     line-height:1em;
     color:#555555;
     font-size: 15px;
+    color:#555555;
 }
 .announcements  {
     position:relative;
-    background-color:#fff;
+    margin-left:5px;
+    background-color:#F8F8F8;
 }
 .announcements:after {
     content: "";
     display: table;
     clear: both;
 }
+.announcements h2 {
+    margin-left:-15px;
+    margin-bottom: 10px;
+}
+.announcements h3 {
+    margin-bottom: -10px;
+}
 .column {
     top: 0;
-    background-color:#fff;
     z-index:-100;
     float: left;
-    width: 30%;
-    margin-left:2.25em;
+    width: 22%;
+    margin-left:4.5em;
+    margin-right:4.5em;
+}
+.column:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .column h2 {
     float:left;
+    font-size:15px;
     top:1em;
     color:#555555;
 }
@@ -502,33 +539,76 @@ body {
 }
 .column button {
     text-decoration-line: underline;
+    float:left;
 }
 .row {
     top:0;
-    background-color:#fff;
 }
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+.buttons {
+    position:relative;
+    margin:auto;
+    top:1em;
+    left:-25em;
+    right:0em;
+}
+.button1 {
+    background-color: #2E6399;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight:bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 75px 10px 75px 0px;
+    cursor: pointer;
+}
+.button1:hover {
+    background-color:#F78F1E;
+}
+.button2 {
+    background-color: #2E6399;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight:bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 75px 10px 75px 0px;
+    cursor: pointer;
+}
+.button2:hover {
+    background-color:#F78F1E;
+}
 .top-footer {
     background-color:#222222;
     position:relative;
     top:0px;
-    height:600px;
+    height:650px;
 }
 .footer-column {
     top: 0;
-    z-index:-100;
-    float: left;
+    z-index:10;
     width: 30%;
     margin-left:2.25em;
 }
-.footer-column h2 {
-    float:left;
-    top:1em;
-    color:#555555;
+.address {
+    position:relative;
+    top:150px;
+    left:100px;
+    text-decoration:none;
+    color: #fff;
+    line-height:1.5em;
+    letter-spacing: 1px;
+    font-size: 12px;
 }
 .footer-column h3 {
     float:left;
@@ -536,12 +616,37 @@ body {
 }
 .footer-column p {
     float:left;
-    top:1em;
+    top:0em;
     color:#555555;
     font-size:14px;
 }
-.footer-column button {
-    text-decoration-line: underline;
+.footer-column2 h2 {
+    position:relative;
+    top:-2.5em;
+    left:500px;
+    font-size: 22px;
+    color:#AAAAAA;
+    margin-bottom:1.25em;
+    border-bottom: .25px solid grey;
+    width:350px;
+}
+.button3 {
+    display:block;
+    position:relative;
+    top:-6em;
+    left:500px;
+    height:40px;
+    color: #AAAAAA;
+    width:350px;
+    padding: .75em 0 1em 0;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: .25px solid grey;
+}
+.button3:hover {
+    background-color:#AAAAAA;
+    color:#000;
 }
 .footer-row {
     top:0;
@@ -552,9 +657,32 @@ body {
     display: table;
     clear: both;
 }
+.footer-column3 {
+    position:absolute;
+    top: 0;
+    right: 3em;
+    z-index:10;
+    width: 350px;
+}
+.footer-column3 h2 {
+    position:relative;
+    font-size: 22px;
+    top:1.5em;
+    left:0em;
+    color:#AAAAAA;
+    width:350px;
+}
+.footer-column3 p {
+    color:#fff;
+    font-size:14px;
+    width:350px;
+}
+.footer-column3 a {
+    color: #fff;
+}
 .page-footer {
     text-align: center;
-    background: #000;
+    background: #111111;
     color: #555555;
     font-size: 10px;
     padding: 1em;
